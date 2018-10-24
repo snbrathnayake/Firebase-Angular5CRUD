@@ -1,0 +1,31 @@
+<h6 class="text-left">Employee Dashboard</h6>
+
+<br />
+<table class="table table-sm table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Salary</th>
+            <th>Option</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeArray">
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.office }}</td>
+            <td>{{ employee.salary }}</td>
+            <td>
+                <a class="btn" (click)= "onEdit(employee)">
+                    <i class="fa fa-pencil-square-o"></i>
+                </a>
+                <a class="btn" (click)="onDelete(employee.$key)">
+                    <i class="fa fa-trash-o"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+
+</table>

@@ -1,0 +1,73 @@
+<h6 class="text-left">Employee Registration</h6>
+
+<form #empForm="ngForm"(ngSubmit)="onSubmit(empForm)">
+<!-- hidden feild for get $key property from  retrive object -->
+<!--    #$key="ngModel"  => create formControll for $key feild with ngModel attrib-->
+    <input 
+      type="hidden"
+      name="$key" 
+      #$key="ngModel" 
+      [(ngModel)] = "employeeService.employee.$key">
+
+    <div class="form-group">
+        <label>Name</label>
+        <input 
+          required
+          type="text" 
+          name="name"
+          #name="ngModel"
+          [(ngModel)] ="employeeService.employee.name"
+          class="form-control"
+          placeholder="Full Name">  
+    </div>
+    <div class="form-group">
+        <label>Position</label>
+        <input 
+          required
+          type="text" 
+          name="position"
+          #position="ngModel"
+          [(ngModel)] ="employeeService.employee.position"
+          class="form-control"
+          placeholder="Position">  
+    </div>
+    <div class="form-group">
+        <label>Office</label>
+        <input 
+          required
+          type="text" 
+          name="office"
+          #position="ngModel"
+          [(ngModel)] ="employeeService.employee.office"
+          class="form-control"
+          placeholder="Office">  
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input 
+          name="salary"
+          #salary="ngModel"
+          [(ngModel)] ="employeeService.employee.salary"
+          class="form-control"
+          placeholder="Salary">  
+    </div>
+    
+    <div class="form-group">
+      <button 
+        type="submit" 
+        class="btn btn-primary"
+        [disabled]="!empForm.valid">
+        <i class="fa fa-floppy-o"></i>
+        Submit
+      </button>
+      
+      <button 
+        type="button" 
+        (click)="resetForm(empForm)"
+        class="btn btn-danger">
+        <i class="fa fa-repeat"></i>
+        Reset
+      </button>
+    </div>
+</form>
+

@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+input.ng-invalid.ng-dirty.ng-touched {
+    border: 2px solid #dc3545 !important;
+}
+
+
+button:hover,a.btn:hover {
+    cursor: pointer;
+}
