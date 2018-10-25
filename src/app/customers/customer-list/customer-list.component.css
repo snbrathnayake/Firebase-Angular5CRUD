@@ -1,0 +1,6 @@
+@import '../../../assets/css/bootwatch-bootstrap.min.css';
+
+.table-section {
+    border-left: 1px solid #eee;
+    height: 100%;
+}

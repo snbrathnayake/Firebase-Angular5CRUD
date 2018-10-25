@@ -17,6 +17,9 @@ import { environment } from '../environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import { LandingPageComponent } from './shared/components/landing-page/landing-page.component';
+import { CustomersComponent } from './customers/customers.component';
+import { CustomerFormComponent } from './customers/customer-form/customer-form.component';
+import { CustomerListComponent } from './customers/customer-list/customer-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { LandingPageComponent } from './shared/components/landing-page/landing-p
     EmployeeListComponent,
     EmployeeFormComponent,
     NavbarComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CustomersComponent,
+    CustomerFormComponent,
+    CustomerListComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -48,7 +54,7 @@ import { LandingPageComponent } from './shared/components/landing-page/landing-p
       },
       {
         path: "add-customer",
-        component:EmployeesComponent
+        component:CustomersComponent
       }
     ]),
   ],

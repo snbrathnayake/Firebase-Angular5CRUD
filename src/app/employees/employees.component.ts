@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
-import { EmployeeService } from '../shared/services/employee.service';
+import { EmployeeService } from '../services/employee.service';
 
 @Component({
   selector: 'app-employees',

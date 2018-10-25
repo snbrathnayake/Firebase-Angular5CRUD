@@ -1,0 +1,32 @@
+<h6 class="text-left">Customer Dashboard</h6>
+<br />
+<div class="table-section">
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Location</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customerArray">
+                <td>{{ customer.fullName }}</td>
+                <td>{{ customer.email }}</td>
+                <td>{{ customer.mobile }}</td>
+                <td>{{ customer.location }}</td>
+                <td>
+                    <a class="btn" (click)="onEdit(customer)">
+                        <i class="fa fa-pencil-square-o"></i>
+                    </a>
+                    <a class="btn" (click)="onDelete(customer.$key)">
+                        <i class="fa fa-trash-o"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
